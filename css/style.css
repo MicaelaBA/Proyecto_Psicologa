@@ -1,0 +1,678 @@
+/* Este es un cod universal y establece márgenes y rellenos a 0 en todos los elementos */
+
+*{
+	margin: 0;
+	padding: 0;
+    /* Permite que los elementos mantengan su tamaño total incluyendo bordes y relleno */
+	box-sizing: border-box;
+}
+/* De la siguiente manera puedo indicar como voy a llamar a mi fuente (font-family) y en donde va encontrar la fuente*/
+@font-face{
+    font-family: "fuente1";
+    src: url('../fonts/Black Mango Black.ttf');
+    
+}
+@font-face{
+    font-family: "fuente2";
+    src: url('../fonts/Louis George Cafe Bold.ttf');  
+}
+@font-face {
+    font-family: "fuente3";
+    src: url('../fonts/Louis George Cafe Light.ttf');
+}
+@font-face {
+    font-family: "fuente4";
+    src: url('../fonts/Garet-Heavy.ttf');
+}
+@font-face {
+    font-family: "fuente5";
+    src: url('../fonts/Garet-Book.ttf');
+}
+@font-face {
+    font-family: "fuente6";
+    src: url('../fonts/Louis George Cafe Italic.ttf');
+}
+/* Estableciendo la fuente para los elementos en el main, header y footer */
+main, header, footer{
+    font-family: fuente3;
+}
+/* Estableciendo la fuente para secciones específicas */
+.sobre_mi h2, .certificaciones h2 , .servicios_contenedor h2, .beneficios_contenedor h1, .sec_testimonio h2, {
+    font-family: fuente4;
+}
+/* Estableciendo la fuente para varios elementos */
+.servicios_contenedor h5, .bene_caja_contenedor h4, .caja_testimonio span, .caja_consult h2, .contacta h2 {
+    font-family: fuente5;
+}
+/*-------------------------------------------------------texto*/
+/* Oculto las redes sociales en la barra de encabezado justo con otros elementos, ya que ahora no necesito que se vean cuando se ve desde un celu */
+.header_redes_completo{
+	display: none;
+}
+/*-----------------------------------------------------BARRA DE NAVEGACIÓN CHICO*/
+.navGeneral2, .nav_completo{
+	display: none;
+}
+.logo2{
+	display: none;
+}
+/* En esta parte,se utiliza GRID y lo que hago es poner esta parte como una grilla cuadriculada(como una hoja de excel), tambien indicamos que se encuentren centradas*/
+.navChico{
+	display: grid;
+	grid-template-rows: auto auto;
+	justify-content: center;
+	text-align: center;
+}
+.navChico ul li {
+    list-style: none; /* sacados los puntos de las listas (no me acuerdo el nombre jaja) */
+    margin-top: 15px; /* incamos que tenga una distancia de 15px entre cada text */
+}
+.navChico ul li a{
+    
+    text-decoration: none; /* Sacamos las lineas que se encuentran siempre en los enlaces (subrrayado) */
+    color: #b48fff; /* indicamos el color del texto */
+}
+
+.navChico .secRedes{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	margin-right: 2rem;
+	justify-content: center;
+}
+.secRedes ul{
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;margin: 15px;
+}
+.navChico .secRedes li{
+	list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b48fff;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%; /* podemos dejar los border redondeados*/
+}
+.navChico .secRedes li a i{
+
+	color: white; 
+}
+
+.navChico .nav-link{
+	color: #303030;
+}
+/*---------------------------------------------------@HEADER*/
+.header_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    flex-direction: column;
+}
+.header_text_C1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+}
+.header_h1{
+    font-size: 35px;
+}
+.header_text img{
+    width:250px;
+}
+.circulo_fondo_color{
+    position: absolute;
+    top: 150px;
+    right: 150px;
+    z-index: -1;
+    background: rgba(180,143,240,0.4);
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+    box-shadow: 0px 0px 100px  rgba(180,143,240);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.circulo_fondo_color2{
+    position: absolute;
+    top: 500px;
+    left: 100px;
+    z-index: -1;
+    background: rgba(201, 143, 240, 0.4);
+    box-shadow: 0px 0px 100px  rgba(201, 143, 240);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.header_button{
+    background-color: #b48ff0;
+    border-radius: 15px;
+    border: none;
+    width: 120px;
+    height: 30px;
+    color: white;
+}
+/*---------------------------------------------------SOBRE MI*/
+.sobre_mi{
+    padding: 30px;
+    text-align: center;
+}
+
+.img_sobreMi{
+    width: 230px;
+}
+.certificaciones{
+    text-align: center;
+}
+.certificaciones .certi1{
+    margin-top: 30px;
+    width: 280px;
+    margin-bottom: 30px;
+}
+
+/*---------------------------------------------------SERVICIOS*/
+.sec_servicios{
+    
+    text-align: center;
+    background-color:#b48fff;
+    padding: 30px;
+    color: white;
+}
+.servicios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.servicios button{
+    background-color: #ffffff;
+    border: none;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+}
+.servi_ico{
+    width: 150px;
+}
+
+/*---------------------------------------------------Beneficios*/
+.sec_beneficios{
+   text-align: center;
+    padding: 35px;
+}
+.beneficios_contenedor img{
+    width: 250px;
+}
+.bene_caja_contenedor button{
+    background-color: #b48fff;
+    border: none;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    margin: 30px;
+}
+.bene_caja img{
+    width: 150px;
+}
+
+/*---------------------------------------------------TESTIMONIOS*/
+.sec_testimonio{
+    text-align: center;
+    padding: 30px;
+}
+.caja_testimonio{
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #b48fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.363);
+}
+
+/*---------------------------------------------------PREGUNTAS*/
+
+.accordion{
+    width: 90%;
+
+}
+/*---------------------------------------------------CONSULTORIO*/
+.sec_consultorio{
+    text-align: center;
+}
+
+.como_llegar, .Horario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+.como_llegar span, .Horario span{
+    padding: 0px;
+}
+.sec_consultorio figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.img_consult{
+    width: 280px;
+    height: 280px;
+    margin-top: 20px
+}
+/*---------------------------------------------------conecta*/
+.contacta h2, span{
+    padding: 15px;
+}
+.contacta hr{
+    width: 90%;
+    border: 1px solid #b48fff;
+}
+.contacta ul{
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;margin: 15px;
+}
+.contacta li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b48fff;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
+}
+.contacta li a{
+    color: white; 
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form input{
+    margin-top: 15px;
+    border: 1px solid #30303056;
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    
+}
+.form  textarea{
+    width: 250px;
+    margin-top: 15px;
+    border: 1px solid #30303056;
+    border-radius: 20px;
+}
+.form .input_button{
+    background-color: #b48fff;
+    color: white;
+    width: 150px;
+}
+.form  ::placeholder{
+    padding: 10px;
+}
+/*---------------------------------------------------FOOTER*/
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    text-align: center;
+    background-color: #b48fff;
+}
+.footer hr{
+    width: 150px;
+    border: 1px solid white;
+}
+.footer_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.footer_logo p{
+    position: absolute;
+    top: 170px;
+    width: 250px;
+}
+.footer_logo ul{
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    margin-top: 90px;
+}
+.footer_logo ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    list-style: none;
+}
+.footer_logo ul li a{
+    color: #b48fff;
+    
+}
+.footer_logo img{
+    width: 200px;
+}
+.footer_navegacion h3{
+    color: white;
+}
+.footer_navegacion ul{
+    padding: 0px;
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+}
+.footer_navegacion ul li{
+    margin-top: 10px;
+    list-style: none;
+}
+.footer_navegacion ul li a{
+    color: white;
+    text-decoration: none;
+}
+.footer_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.footer_img figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.footer_img figure img{
+    width: 150px;
+}
+.footer_img button{
+    border: none;
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+
+}
+/*---------------------------------------------------@MEDIA*/
+@media(min-width: 480px){
+	nav{
+		display: none;
+	}
+	.contenedorF{
+		margin-right: 15px;
+	}
+    .circulo_fondo_color{
+        position: absolute;
+        left: 0px;
+    }
+    .circulo_fondo_color2{
+        position: absolute;
+        left: 260px;
+    }
+    .footer_logo p{
+        width: 350px;
+    }
+    .footer_img figure img{
+        margin: 5px;
+    }
+
+}
+@media(min-width:600px){
+    .sec_consultorio figure img, .certificaciones figure img{
+        margin: 5px;
+    }
+    .servicios_contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .servicios{
+        width: 250px;
+        height: 450px;
+        margin: 0px 10px 10px 10px;
+        margin-top: 0px;
+    }
+    .bene_caja_contenedor{
+        margin-top: 30px;
+    }
+    .bene_caja{
+        display: flex;
+        width: 100%;
+    }
+    .bene_caja_text{
+        text-align: left;
+        margin-left: 25px;
+    }
+    .bene_caja figure img{
+        width: 70px;
+    }
+}
+@media(min-width: 768px){
+	.contenedorF{
+		display: none;	
+	}	
+	.header_redes_completo ul{
+		display: flex;
+		justify-content: center;
+		padding-left: 0px;
+	}
+	.header_redes_completo li {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		list-style: none;
+		margin: 10px 10px 20px 10px;	
+	}
+	.header_redes_completo li a{
+		color: #b48fff;
+		font-size: 20px;
+	}
+	.header_redes_completo{
+		display: block;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	.navGeneral2{
+		display: flex;
+		justify-content: center;	
+	}
+	.navGeneral2_ul{
+		display: flex;
+		align-items: center;
+		margin: 0px;
+		padding: 0px;	
+	}
+	.navGeneral2_ul li{
+		list-style: none;
+		margin: 10px;
+	}
+	.navGeneral2_ul li a{
+		text-decoration: none;
+		color: #3f3f3f;
+		font-family: Arial;
+		transition: 0.3s;
+        font-size: 12px;
+	}
+	.navGeneral2_ul li a:hover{
+			color: #b48fff;
+		transition: 0.3s;
+		}
+	.logo2{
+		display: block;
+	}
+	.logo2 img{
+		display: block;
+	}
+	.logo1{
+		display: none;
+	}
+	.header_text{
+		display: flex;
+		flex-direction: row;
+	}
+	.header_text_C1{
+		margin-top: 40px;
+		padding: 25px;
+	}
+	.header_text .img1{
+		width: 400px;
+	}
+    .sobre_mi{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .sec_sobre_mi_text{
+        padding: 0px 30px 0px 30px;
+    }
+    .bene_caja_contenedor button{
+        width: 150px;
+        height: 50px;
+    }
+    .contacta{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        padding: 30px;
+    }
+    .contacta span{
+        font-size: 20px;
+    }
+	#arriba{
+		margin-left: 50px;
+	}
+}
+@media(min-width: 1024px){
+	.general{
+		display: flex;
+		justify-content: space-around !important;
+	}
+    .header_text{
+         display: flex;
+         justify-content: space-around;
+    }
+    .header_text_C1 h1{
+        font-size: 45px;
+    }
+    .header_text_C1 p{
+        font-size: 25px;
+    }
+    .header_text img{
+        width: 350px;
+    }
+    .header_text_C1{
+        width: 400px;
+    }
+    .header_redes_completo ul li a {
+        font-size: 27px;
+    }
+	.header_button{
+        width: 150px;
+        height: 50px;
+    }
+    .sobre_mi{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .img_sobreMi{
+        width: 300px;
+    }
+    .sec_sobre_mi_text{
+        width: 500px;
+    }.bene_caja_contenedor{
+        margin-top: 0px;
+        padding-right: 15px;
+    }
+    .sec_beneficios{
+
+    }
+    .beneficios_contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+
+    .bene_img img{
+        width: 400px;
+    }
+    
+    .testi_conteiner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        
+    }
+    .caja_testimonio{
+        margin: 20px;
+        height: 250px;
+        width: 300px;
+    }
+    .caja_testimonio p{
+        font-family: fuente6;
+    }
+    .caja_consult{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .caja_consult_text{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .conecta_text{
+        width: 60%;
+    }
+    .footer{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .footer hr{
+        display: none;
+    }
+    .footer_logo p{
+        width: 250px;
+    }
+    
+}
+@media(min-width: 1200px){
+
+	#arriba{
+		margin-left: 130px;
+	}
+}
