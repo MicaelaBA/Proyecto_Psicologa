@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Psicologa</title>
+        <link rel="icon" href="Images/logos/logo.ico">
         <link rel="stylesheet" href="css/style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">    
@@ -14,175 +15,129 @@
             <div class="header-1"><!-- HAY ALGUNOS ESTILOS QUE SON DE BOOTSTRAP, POR LO TANTO NO SE COMENTARAN YA QUE SON VARIOS Y NO TERMINARÍA MÁS :D-->
                 <nav class="navbar">		
                     <div class="container-fluid general"> <!-- Acá podemos encontrar el menu adaptado a computadora, el cual contiene el logo y las diferentes secciones que vamos a encontrar en nuestra pag -->
-                        <img class="logo2" src="images/logos/5-logo-color.png" width="120px"> <!-- Introduje el logo en la etiqueta IMG y coloque la ruta (src) correspondiente para que se encuentre mi LOGO -->
+                        <img class="logo2" src="images/logos/5-logo-color.png" width="120px"> <!--Introduje el logo en la etiqueta IMG y coloque la ruta (src) correspondiente para que se encuentre mi LOGO -->
                         <div class="navGeneral2">
                             <ul class="navGeneral2_ul"> <!-- Para hacer el menu, hice una lista desordenada (no neecsito que se encuentre ordenado/enumerado) y cada li tiene su a (enlace) que nos redirije a las secciones de nuestra pag-->
-                                <li>
-                                    <a href="#sobre_mi">SOBRE MI </a> <!-- puede los # con el ID de cada sección, para que de esta manera me redirija a la sección que estoy buscando dentro de mi pag RECORDATORIO: (LOS ID son identificadores únicos y de está manera puedo navegar/desplazarme dentro de mi pag)-->
-                                </li>
-                                <li>
-                                    <a  href="#servicio">SERVICIOS</a>
-                                </li>
-                                <li>
-                                    <a  href="#beneficios">BENEFICIOS</a>
-                                </li>
-                                <li>
-                                    <a  href="#testimonios">TESTIMONIOS</a>
-                                </li>
-                                <li>
-                                    <a  href="#preguntas">PREGUNTAS</a>
-                                </li>
-                                <li>
-                                    <a  href="#consultorio">CONOCENOS</a>
-                                </li>
+                                <li><a href="#sobre_mi">SOBRE MI </a></li> <!-- puede los # con el ID de cada sección, para que de esta manera me redirija a la sección que estoy buscando dentro de mi pag RECORDATORIO: (LOS ID son identificadores únicos y de está manera puedo navegar/desplazarme dentro de mi pag)-->
+                                <li><a  href="#servicios">SERVICIOS</a></li>
+                                <li><a  href="#beneficios">BENEFICIOS</a></li>
+                                <li><a  href="#testimonios">TESTIMONIOS</a></li>
+                                <li><a  href="#preguntas">PREGUNTAS</a></li>  
+                                <li><a  href="#consultorio">CONSULTORIO</a></li>
+                                <li><a  href="#conecta">CONECTA</a></li>
+                                <button class="fond_oscuro active" id="boton_fond_osc">
+                                    <span><i class="bi bi-brightness-high-fill"></i></span>
+                                    <span><i class="bi bi-moon-stars-fill"></i></span>
+                                </button>
                             </ul>
                         </div> 
-                        <img class="logo1" src="images/logos/5-logo-color.png" width="90px">
+                        <img class="logo1" src="images/logos/5-logo-color.png" width="120px">
                         <button class="navbar-toggler contenedorF" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon icon_menu"></span><!-- Este es el menu en modo hamburguesa -->
                         </button>
-                    <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                           <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                    <div class="offcanvas offcanvas-end "  tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header " >
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5> 
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body navChico"> <!-- En este caso encontraremos al menu como una barra lateral derecha y podemos ver la mis lista desordenada -->
-                            <ul class="navbar-nav flex-grow-1">
-                                <li>
-                                    <a href="#sobre_mi">SOBRE MI </a>
-                                </li>
-                                <li>
-                                    <a  href="#servicios">SERVICIOS</a>
-                                </li>
-                                <li>
-                                    <a  href="#beneficios">BENEFICIOS</a>
-                                </li>
-                                <li>
-                                    <a  href="#testimonio">TESTIMONIOS</a>
-                                </li>
-                                <li>
-                                    <a  href="#preguntas">PREGUNTAS</a>
-                                </li>
-                                <li>
-                                    <a  href="#consultorio">CONSULTORIO</a>
-                                </li>
-                                <li>
-                                    <a  href="#conecta">CONECTA</a>
-                                </li>
+                            <ul class="navbar-nav flex-grow-1 hambur">
+                                <li><a href="#sobre_mi">SOBRE MI </a></li>
+                                <li><a  href="#servicios">SERVICIOS</a></li>
+                                <li><a  href="#beneficios">BENEFICIOS</a></li>
+                                <li><a  href="#testimonios">TESTIMONIOS</a></li>
+                                <li><a  href="#preguntas">PREGUNTAS</a></li>
+                                <li><a  href="#consultorio">CONSULTORIO</a></li>
+                                <li><a  href="#conecta">CONECTA</a></li>
                             </ul>
                             <ul class="secRedes"> <!-- Esta barra lateral tambien podremos encontrarnos con las redes que de igual manera se encuentra enlistadas pero con la diferencia que ahora introducimos un i para los iconos  -->
-                                    <li class="">
-                                        <a href="facebook.com"><i class="bi bi-facebook"></i></a>
-                                    </li>
-                                    <li class="">
-                                        <a href="tiktok.com"><i class="bi bi-twitter"></i></a>
-                                    </li>
-                                    <li><a href=""><i class="bi bi-instagram"></i></a></li>
-                                     </ul>								 
+                                <li><a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a></li>
+                                <li><a href="https://www.twitter.com"><i class="bi bi-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a></li>
+                            </ul>								 
                           </div>
                         </div>
                     </div>
                 </nav>
             </div>	
             <div class="header_text"><!-- en esta parte encontraremos texto, redes y una img -->
-                
                 <div class="header_text_C1">
                     <h1 class="header_h1">Descubre tu Bienestar Interior</h1><!-- El H1 es el titulo principal de nuestra pag, por lo tanto necesitamos que sea grande y es por eso que utilizamos el h1 -->
                     <p>Bienvenido a mi espacio dedicado a brindarte apoyo emocional y herramientas para que puedas alcanzar un estado de bienestar y equilibrio en tu vida.</p><!-- Las p son párrafos  y en nuestra pag se utilizará como una intro-->
                     <div class="header_redes_completo">
                         <ul> <!-- nos encontramos con una lista desordenada con sus enlaces e iconos  -->
-                            <li><a href="https://www.whatsapp.com/?lang=es"><i class="bi bi-facebook"></i></a></li>
-                            <li><a href="https://tiktok.com"><i class="bi bi-twitter"></i></a></li>
-                            <li><a href=""><i class="bi bi-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a></li>
+                            <li><a href="https://www.twitter.com"><i class="bi bi-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a></li>
                         </ul>
                     </div>
-                    <button class="header_button">Conocer más</button> <!-- tenemos un botón, el cual generalmente es nuestro llamado a la acción, el que debería de decir algo como "Comunicate, enviar msj, etc" -->
+                    <button class="header_button"><a href="#conecta">Reserva tu Consulta</a></button> <!-- tenemos un botón, el cual generalmente es nuestro llamado a la acción, el que debería de decir algo como "Comunicate, enviar msj, etc" -->
                 </div>
                 <img src="Images/img1.png" alt="mujer en encabezado"> <!-- tenemos una img para que llame la atención -->
                 <!--Estos son divs que viene a ser mis circulos violetas que se ven a la pag -->
                 <div class="circulo_fondo_color"></div> 
                 <div class="circulo_fondo_color2"></div>
+                <div class="circulo_fondo_color3"></div>
+                <div class="circulo_fondo_color4"></div>
             </div>
         </header>
         <main><!-- el MAIN es el contenido principal y va estar separada por secciones-->
             <section class="sec_sobre_mi" id="sobre_mi"> <!-- SECTION es para hacer un separación/dividir mi pag en pequeñas secciones -->
                 <div class="sobre_mi">
                     <div class="sec_sobre_mi_text">
-                        <h2>Sobre Mi</h2> <!-- puse un h2 y h3 que es un poquito más chiquito que el H1 que me parecieron ideales para está sección-->
+                        <h1>Sobre Mi</h1> <!-- puse un h1 y h3 que es un poquito más chiquito que el H1 que me parecieron ideales para está sección-->
                         <h3>"Considero que la buena gestión de las emociones es clave para poder ser feliz"</h3> 
                         <!-- tenemos un p para indicar que vamos a tener un párrafo -->
                         <p>Soy Psicologa, graduada de la UBA en el año 2007 y actualmente trabajo en el Instituto Rojas Estapé. Tras terminar la carrera opté por colaborar en un proyecto solidario en Camboya que acabaría cambiando mi vida en muchos aspectos. Allí trabajé en la Fundación de Somaly Mam, AFESIP, ayudando a niñas de los prostíbulos que habían sido vendidas a redes de tráfico sexual desde pequeñas. Entré en los burdeles para entender mejor la historia de esas jóvenes y desde entonces colaboro con Somaly para ayudar en la prevención del tráfico sexual.</p>
                     </div>
                     <div class="sec_sobre_mi_img">
-                        <figure>
                             <img class="img_sobreMi" src="Images/img.jpg" alt=""> <!-- tenemos la imagen de la psico sentada y la colocamos en el atri. img indicando con src en donde se encuentra la img -->
-                        </figure>
                     </div>    
                 </div>
                 <div class="certificaciones">
-                    <h2>Certificados</h2>
-                    <figure> <!-- tenemos 3 certificados y sus rutas  -->
+                    <h1>Certificados</h1>
                         <img src="Images/certificados/certi.jpg" class="certi1" alt="">
                         <img src="Images/certificados/certi1.jpg" class="certi1"alt="">
-                        <img src="Images/certificados/certi2.jpg" class="certi1" alt="">
-                    </figure>    
                 </div>
             </section>
             <section class="sec_servicios" id="servicios"> <!-- nuevamente nos encontramos con h2, h5(un tamaño más chiquito que el h2), encontramos img, p (párrafos) y button (bóton para que lo lleve a contactase con la psico) -->
-                <h2>Servicios</h2>
+                <h1>Servicios</h1>
                 <div class="servicios_contenedor">
-                    
                     <div class="servicios">
-                        <figure>
-                            <img class="servi_ico" src="Images/iconos/1.png" alt=""> <!-- se repiten las mismo atrib. img del icono, h5, p y button -->
-                        </figure>
+                        <img class="servi_ico" src="Images/iconos/1.png" alt=""> <!-- se repiten las mismo atrib. img del icono, h5, p y button -->
                         <h5>Diagnóstico</h5>
-                        <p>El Diagnostico Psicológico es un proceso de investigación especifico y pertinente al perfil y quehacer del profesional Psicólogo. con objetivos y finalidades delimitadas así como coordenadas diferenciadas.</p>
-                        <button >Ver más</button>
+                        <p>El Diagnostico Psicológico es un proceso de investigación especifico y pertinente al perfil y quehacer del profesional Psicólogo. </p>
+                        <button ><a href="#conecta">Consultar</a></button>
                     </div>
                     <div class="servicios">
-                        <figure>
-                             <img class="servi_ico" src="Images/iconos/2.png" alt="">
-                        </figure>
+                        <img class="servi_ico" src="Images/iconos/2.png" alt="">
                         <h5>Psicología</h5>
                         <p>La psicología es la ciencia que estudia la conducta humana y los procesos mentales.</p>
-                        <button>Ver más</button>
-                        
+                        <button ><a href="#conecta">Consultar</a></button>
                     </div>
                     <div class="servicios">
-                        <figure>
-                            <img class="servi_ico" src="Images/iconos/3.png" alt="">
-                        </figure>
+                        <img class="servi_ico" src="Images/iconos/3.png" alt="">
                         <h5>Terapia Individual</h5>
-                        <p>La terapia individual es un espacio y una oportunidad para pensar, ordenar cosas, evaluar y replantear temas que generan sufrimiento, resolver conflictos, gestar cambios, adquirir herramientas y recursos, liberar cargas y crecer personalmente.</p>
-                        <button>Ver más</button>
+                        <p>La terapia individual es un espacio y una oportunidad para pensar, evaluar y replantear temas que generan sufrimiento y liberar cargas y crecer personalmente.</p>
+                        <button ><a href="#conecta">Consultar</a></button>
                     </div>
                     <div class="servicios">
-                        <figure>
-                            <img class="servi_ico" src="Images/iconos/4.png" alt="">
-                        </figure>
+                        <img class="servi_ico" src="Images/iconos/4.png" alt="">
                         <h5>Terapia de pareja</h5>
                         <p>La terapia de pareja es un tipo de consulta de psicoterapia destinada a analizar y tratar los conflictos surgidos en el seno de una relación amorosa.</p>
-                        <button>Ver más</button>
-                       
+                        <button ><a href="#conecta">Consultar</a></button>
                     </div>
-                    <div class="servicios">
-                       
-                        <figure>
-                            <img class="servi_ico" src="Images/iconos/5.png" alt="">
-                        </figure>
-                        <h5>Preparación psicotécnica</h5>
+                    <div class="servicios">     
+                        <img class="servi_ico" src="Images/iconos/5.png" alt="">
+                        <h5>Psicotécnica</h5>
                         <p>Consisten en un examen tipo test y los niveles se comparan con un estándar por lo que, normalmente, se debe lograr cierta puntuación para pasarlas.</p>
-                        <button>Ver más</button>
-                        
+                        <button ><a href="#conecta">Consultar</a></button>
                     </div>
                     <div class="servicios">
-                        <figure>
-                            <img class="servi_ico" src="Images/iconos/6.png" alt="">
-                        </figure>
+                        <img class="servi_ico" src="Images/iconos/6.png" alt="">
                         <h5>Test vocacional</h5>
                         <p>El test vocacional es un recurso que se emplea en el proceso de orientación vocacional para ayudar a los estudiantes a elegir una carrera. </p>
-                        <button>Ver más</button>
+                        <button ><a href="#conecta">Consultar</a></button>
                     </div>
                 </div>
             </section>
@@ -193,43 +148,35 @@
                     <div class="bene_caja_contenedor">
                        
                         <div class="bene_caja">
-                            <figure>
-                                <img src="./Images/iconos/9_color.png" alt="">
-                            </figure>
+                            <img src="./Images/iconos/9_color.png" alt="">
                             <div class="bene_caja_text">
                                 <h4>SALUD MENTAL</h4>
                                 <P>La salud mental es un estado de bienestar mental que permite a las personas hacer frente a los momentos de estrés de la vida, desarrollar todas sus habilidadesy trabajar adecuadamente.</P>
                             </div>    
                         </div>
                         <div class="bene_caja">
-                            <figure>
-                                <img src="Images/iconos/7_color.png" alt="">
-                            </figure>
+                            <img src="Images/iconos/7_color.png" alt="">
                             <div class="bene_caja_text">
-                            <h4>FELICIDAD</h4>
-                            <P>la felicidad es un estado emocional positivo que los individuos alcanzan cuando han satisfecho sus deseos y cumplido sus objetivos y viene medida.</P>
+                                <h4>FELICIDAD</h4>
+                                <P>la felicidad es un estado emocional positivo que los individuos alcanzan cuando han satisfecho sus deseos y cumplido sus objetivos y viene medida.</P>
                             </div>
                         </div>
                         <div class="bene_caja">
-                            <figure>
-                                <img src="Images/iconos/8_color.png" alt="">
-                            </figure>
+                            <img src="Images/iconos/8_color.png" alt="">
                             <div class="bene_caja_text">
-                            <h4>RELACIONES SANAS</h4>
-                            <P>En una relación saludable ambos miembros de la pareja se sienten valorados y respetados, y se respetan sus límites. </P>
+                                <h4>RELACIONES SANAS</h4>
+                                <P>En una relación saludable ambos miembros de la pareja se sienten valorados y respetados, y se respetan sus límites. </P>
+                            </div>
                         </div>
-                        </div>
-                        <button>Contactar</button>
+                        <button ><a href="#conecta">Contactar</a></button>
                     </div>
                     <div class="bene_img">
-                        <figure >
                             <img src="Images/img6.jpg" alt="" >
-                        </figure>
                     </div>
                 </div>
             </section>
-            <section class="sec_testimonio" id="testimonio">
-                <h2>Que dicen mis pacientes</h2>
+            <section class="sec_testimonio" id="testimonios">
+                <h1>Que dicen mis pacientes</h1>
                 <div class="testi_conteiner">
                     <div class="caja_testimonio">
                         <p>"Hablar de la salud mental sigue siendo tabú. En la vida enfrentamos momentos duros, y un psicólogo nos ayuda a mantener la perspectiva y a enfrentar pensamientos negativos."</p>
@@ -245,13 +192,13 @@
                     </div>
                 </div>
             </section>
-            <section id="sec_preguntas">
+            <section class="sec_preguntas" id="preguntas">
                 <center>
-                <h2>Preguntas frecuentes</h2>
+                <h1>Preguntas frecuentes</h1>
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <button class="accordion-button collapsed acord_text_Pre" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                             ¿Qué puedo esperar en mi primera sesión?
                         </button>
                     </h2>
@@ -303,15 +250,13 @@
             </center>
             </section>
             <section class="sec_consultorio" id="consultorio">
-                <h2>Nuestro consultorio</h2>
-                <figure>
+                <h1>Nuestro consultorio</h1>
                     <img src="Images/consultorio/1_consultorio.jpg" alt="" class="img_consult">
                     <img src="Images/consultorio/2_consultorio.jpg" alt="" class="img_consult">
                     <img src="Images/consultorio/3_consultorio.jpg" alt="" class="img_consult">
                     <img src="Images/consultorio/4_consultorio.jpg" alt="" class="img_consult">
                     <img src="Images/consultorio/5_consultorio.jpg" alt="" class="img_consult">
                     <img src="Images/consultorio/6_consultio.jpg" alt="" class="img_consult">
-                </figure>
                 <div class="caja_consult">
                     <div class="caja_consult_text">
                         <div class="como_llegar">
@@ -335,12 +280,12 @@
             <section class="contacta" id="conecta">
                 <div class="conecta_text">
                     <h2>Envía un mensaje para solicitar tu primera consulta</h2>
-                    <span>Si tienes duda o comentarió, puedes escribirnos aqui mismo.</span>
+                    <p>Si tienes duda o comentarió, puedes escribirnos aqui mismo.</p>
                     <hr>
                     <ul>
-                        <li><a href="https://www.whatsapp.com/?lang=es"><i class="bi bi-facebook"></i></a></li>
-                        <li><a href="https://tiktok.com"><i class="bi bi-twitter"></i></a></li>
-                        <li><a href=""><i class="bi bi-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="https://www.twitter.com/"><i class="bi bi-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a></li>
                     </ul>
                 </div>
                 <div class="conecta_form">
@@ -349,60 +294,49 @@
                         <input type="email" placeholder="Email (requerido)" required>
                         <input type="tel" placeholder="Teléfono">
                         <textarea name="your-message"  placeholder="Mensaje"></textarea>
-                        <input type="submit" value="Submit" class="input_button">
+                        <input type="submit" value="Enviar" class="input_button">
                         
                     </form>
                 </div>
             </section>
+            <button class="button_arriba" id="arriba">
+                <i class="bi bi-chevron-double-up"></i>
+            </button>
         </main>
         <footer class="footer">
             <div class="footer_logo">
-                <figure>
-                    <img src="Images/logos/4-logo-blanco.png" alt="logo">
-                </figure>
+                <img src="Images/logos/4-logo-blanco.png" alt="logo">
                 <p>Bienvenido a mi espacio dedicado a brindarte apoyo emocional y herramientas para que puedas alcanzar un estado de bienestar y equilibrio en tu vida.</p>
                 <ul>
-                    <li><a href="https://www.whatsapp.com/?lang=es"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="https://tiktok.com"><i class="bi bi-twitter"></i></a></li>
-                    <li><a href=""><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="https://www.twitter.com"><i class="bi bi-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a></li>
                 </ul>
             </div>
             <hr>
             <div class="footer_navegacion">
                 <h3>Navegación</h3>
                 <ul>
-                    <li>
-                        <a href="index.html">SOBRE MI </a>
-                    </li>
-                    <li>
-                        <a  href="partes/equipo.html">SERVICIOS</a>
-                    </li>
-                    <li>
-                        <a  href="partes/alcance.html">BENEFICIOS</a>
-                    </li>
-                    <li>
-                        <a  href="partes/PreguntasFrecuentes.html">TESTIMONIOS</a>
-                    </li>
-                    <li>
-                        <a  href="partes/PreguntasFrecuentes.html">PREGUNTAS</a>
-                    </li>
-                    <li>
-                        <a  href="partes/PreguntasFrecuentes.html">CONSULTORIO</a>
-                    </li>
-                    <li>
-                        <a  href="partes/PreguntasFrecuentes.html">CONECTA</a>
-                    </li>
+                    <li><a href="#sobre_mi">SOBRE MI </a></li>
+                    <li><a  href="#servicios">SERVICIOS</a></li>
+                    <li><a  href="#beneficios">BENEFICIOS</a></li>
+                    <li><a  href="#testimonios">TESTIMONIOS</a></li>
+                    <li><a  href="#preguntas">PREGUNTAS</a></li>
+                    <li><a  href="#consultorio">CONSULTORIO</a></li>
+                    <li><a  href="#conecta">CONECTA</a></li>  
                 </ul>
             </div>
             <hr>
             <div class="footer_img">
-                <figure>
+                <div class="caja_footer_img">
                     <img src="Images/consultorio/4_consultorio.jpg" alt="">
                     <img src="Images/consultorio/5_consultorio.jpg" alt="">
-                </figure>
-                <button>Contactar</button>
+                </div>
+                <button ><a href="#conecta">Contactar</a></button>
             </div>
         </footer>
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <script src="scripts/app.js"></script>
     </body>
 </html>

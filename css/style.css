@@ -37,18 +37,80 @@ main, header, footer{
     font-family: fuente3;
 }
 /* Estableciendo la fuente para secciones específicas */
-.sobre_mi h2, .certificaciones h2 , .servicios_contenedor h2, .beneficios_contenedor h1, .sec_testimonio h2, {
-    font-family: fuente4;
+.sobre_mi h1, .certificaciones h1 , .sec_servicios h1, .sec_beneficios h1, .sec_testimonio h1, .sec_preguntas h1 {
+    
+    font-size: 35px;
 }
 /* Estableciendo la fuente para varios elementos */
-.servicios_contenedor h5, .bene_caja_contenedor h4, .caja_testimonio span, .caja_consult h2, .contacta h2 {
+.sobre_mi h1, .certificaciones h1 , .sec_servicios h1, .sec_beneficios h1, .sec_testimonio h1, .sec_consultorio h1, .servicios_contenedor h5, .bene_caja_contenedor h4, .caja_testimonio span, .caja_consult h2, .contacta h2 {
     font-family: fuente5;
 }
-/*-------------------------------------------------------texto*/
+
 /* Oculto las redes sociales en la barra de encabezado justo con otros elementos, ya que ahora no necesito que se vean cuando se ve desde un celu */
 .header_redes_completo{
 	display: none;
+    font-size: ;
 }
+/* -------------------------------------------------- */
+.fond_oscuro{
+    background-color: #4d3480;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    align-items: center;
+    border: none;
+    justify-content: space-between;
+}
+.fond_oscuro span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    color: #fff;
+}
+.fond_oscuro::after{
+    display: block;
+    background-color: #fefff5;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 50%;
+    transition: all .5s ease;
+    box-shadow: 0 0 1.5px 1.5px rgba(0, 0, 0, .5);
+    content: "";
+}
+.fond_oscuro.active{
+    background-color: #b48fff;
+}
+.fond_oscuro.active::after{
+    left: unset;
+    right: 0;
+}
+body{
+    background-color: #fff;
+    color: #000;
+}
+body.osc{
+    background-color: #222;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /*-----------------------------------------------------BARRA DE NAVEGACIÓN CHICO*/
 .navGeneral2, .nav_completo{
 	display: none;
@@ -67,44 +129,47 @@ main, header, footer{
     list-style: none; /* sacados los puntos de las listas (no me acuerdo el nombre jaja) */
     margin-top: 15px; /* incamos que tenga una distancia de 15px entre cada text */
 }
-.navChico ul li a{
-    
+.hambur li a{ 
     text-decoration: none; /* Sacamos las lineas que se encuentran siempre en los enlaces (subrrayado) */
-    color: #b48fff; /* indicamos el color del texto */
-}
+    color: #000000; /* indicamos el color del texto */
+    transition: all 0.3s;
 
-.navChico .secRedes{
+}
+.hambur li a:hover{ 
+    color: #b48fff;
+    transition: all 0.3s;
+}
+.secRedes{
 	display: grid;
 	grid-template-columns: auto auto auto;
-	margin-right: 2rem;
-	justify-content: center;
 }
 .secRedes ul{
-    display: flex;
     padding: 0px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;margin: 15px;
 }
-.navChico .secRedes li{
-	list-style: none;
+.navChico .secRedes li {
+    margin: 10px;
+}
+.navChico .secRedes li a{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #b48fff;
     width: 50px;
     height: 50px;
-    margin: 10px;
+    transition: all 0.3s;
     border-radius: 50%; /* podemos dejar los border redondeados*/
 }
-.navChico .secRedes li a i{
-
+.navChico .secRedes li a:hover{
+    background-color: #9e6dff;
+    transform:translateY(-10px);
+    transition: 0.3s;
+    
+}
+.secRedes li a i{
 	color: white; 
+    font-size: 25px;
 }
 
-.navChico .nav-link{
-	color: #303030;
-}
 /*---------------------------------------------------@HEADER*/
 .header_text{
     display: flex;
@@ -133,8 +198,6 @@ main, header, footer{
     right: 150px;
     z-index: -1;
     background: rgba(180,143,240,0.4);
-    backdrop-filter: blur(0.4rem);
-    -webkit-backdrop-filter: blur(0.4rem);
     box-shadow: 0px 0px 100px  rgba(180,143,240);
     width: 200px;
     height: 200px;
@@ -155,9 +218,21 @@ main, header, footer{
     background-color: #b48ff0;
     border-radius: 15px;
     border: none;
-    width: 120px;
-    height: 30px;
+    width: 180px;
+    height: 40px;
+    
+    transition: all 0.3s;
+}
+.header_button a{
     color: white;
+    font-family: fuente2;
+    text-decoration: none;
+}
+.header_button:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+    background-color: #cbb2fd;
+    box-shadow: 0px 0px 10px 0 #3f3f3f9c;
 }
 /*---------------------------------------------------SOBRE MI*/
 .sobre_mi{
@@ -176,28 +251,49 @@ main, header, footer{
     width: 280px;
     margin-bottom: 30px;
 }
-
 /*---------------------------------------------------SERVICIOS*/
 .sec_servicios{
-    
     text-align: center;
     background-color:#b48fff;
     padding: 30px;
     color: white;
 }
 .servicios{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto;
     margin-top: 40px;
+}
+.servicios img{
+    justify-self: center;
+}
+.servicios h5{
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom:0px;
+}
+.servicios p{
+    height: 140px;
+    margin-bottom:0px;
+    padding: 0px 15px 0px 15px;
 }
 .servicios button{
     background-color: #ffffff;
     border: none;
     width: 100px;
     height: 35px;
+    transition: all 0.3s;
     border-radius: 10px;
+    justify-self: center;
+}
+.servicios button a{
+    text-decoration: none;
+    color: #181818;
+    
+}
+.servicios button:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+    box-shadow: 0px 0px 10px 0 #3f3f3f9c;
 }
 .servi_ico{
     width: 150px;
@@ -205,7 +301,7 @@ main, header, footer{
 
 /*---------------------------------------------------Beneficios*/
 .sec_beneficios{
-   text-align: center;
+    text-align: center;
     padding: 35px;
 }
 .beneficios_contenedor img{
@@ -218,6 +314,17 @@ main, header, footer{
     height: 35px;
     border-radius: 10px;
     margin: 30px;
+    transition: all 0.3s;
+}
+.bene_caja_contenedor button a{
+    text-decoration: none;
+    color: #181818;
+}
+.bene_caja_contenedor button:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+    background-color: #cbb2fd;
+    box-shadow: 0px 0px 10px 0 #3f3f3f9c;
 }
 .bene_caja img{
     width: 150px;
@@ -257,21 +364,20 @@ main, header, footer{
 .como_llegar span, .Horario span{
     padding: 0px;
 }
-.sec_consultorio figure{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.sec_consultorio img{
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+    transition: all 0.3s ease-out;
 }
-.img_consult{
-    width: 280px;
-    height: 280px;
-    margin-top: 20px
+.sec_consultorio img:hover{
+    transform: scale(1.1);
 }
 /*---------------------------------------------------conecta*/
-.contacta h2, span{
-    padding: 15px;
+.contacta h2, p{
+    padding: 10px 15px 5px 15px;
 }
+
 .contacta hr{
     width: 90%;
     border: 1px solid #b48fff;
@@ -281,9 +387,12 @@ main, header, footer{
     padding: 0px;
     justify-content: center;
     align-items: center;
-    flex-direction: row;margin: 15px;
+    flex-direction: row;
+    margin: 15px;
+    list-style: none;
 }
-.contacta li{
+
+.contacta li a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -292,9 +401,17 @@ main, header, footer{
     height: 50px;
     margin: 10px;
     border-radius: 50%;
+    transition: all 0.3s;
 }
 .contacta li a{
+    
     color: white; 
+}
+.contacta li a:hover{
+    background-color: #9e6dff;
+    transform:translateY(-10px);
+    transition: all 0.3s;
+    
 }
 .form{
     display: flex;
@@ -305,10 +422,11 @@ main, header, footer{
 
 .form input{
     margin-top: 15px;
-    border: 1px solid #30303056;
+    border: 1px solid #61616156;
     width: 250px;
     height: 50px;
     border-radius: 20px;
+    padding: 15px;
     
 }
 .form  textarea{
@@ -316,14 +434,40 @@ main, header, footer{
     margin-top: 15px;
     border: 1px solid #30303056;
     border-radius: 20px;
+    padding: 15px;
 }
 .form .input_button{
     background-color: #b48fff;
     color: white;
     width: 150px;
+    transition: all 0.3s;
 }
-.form  ::placeholder{
-    padding: 10px;
+.form .input_button:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+    background-color: #cbb2fd;
+    box-shadow: 0px 0px 10px 0 #3f3f3f9c;
+}
+/*---------------------------------------------------BOTON ARRIBA*/
+#arriba{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid #d4bfff;
+	background-color:  #9c57b1;
+	position: fixed;
+	left: 85%;
+	bottom: 50px;
+	cursor: pointer;
+	transition: all .3s ease;
+	transform: scale(0);
+}
+#arriba:hover{
+	opacity: .70;
+	transform: scale(1.1);
+}
+.bi-chevron-double-up{
+	font-size: 15px;
 }
 /*---------------------------------------------------FOOTER*/
 .footer{
@@ -348,7 +492,7 @@ main, header, footer{
 }
 .footer_logo p{
     position: absolute;
-    top: 170px;
+    top: 190px;
     width: 250px;
 }
 .footer_logo ul{
@@ -358,8 +502,9 @@ main, header, footer{
     align-items: center;
     margin: 15px;
     margin-top: 90px;
+    list-style: none;
 }
-.footer_logo ul li{
+.footer_logo ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -369,13 +514,21 @@ main, header, footer{
     margin: 10px;
     border-radius: 50%;
     list-style: none;
+    transition: all 0.3s;
 }
 .footer_logo ul li a{
-    color: #b48fff;
-    
+    color: #b48fff;  
 }
+.footer_logo li a:hover{
+    transform:translateY(-10px);
+    transition: all 0.3s;
+}
+.footer_logo li a i{
+    font-size: 25px;
+}
+
 .footer_logo img{
-    width: 200px;
+    width: 250px;
 }
 .footer_navegacion h3{
     color: white;
@@ -397,6 +550,10 @@ main, header, footer{
     color: white;
     text-decoration: none;
 }
+.footer_navegacion ul li a:hover{
+    transform: translateY(10px);
+    transition: all 0.3s;
+}
 .footer_img{
     display: flex;
     justify-content: center;
@@ -404,14 +561,10 @@ main, header, footer{
     flex-direction: column;
     margin-bottom: 40px;
 }
-.footer_img figure{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-.footer_img figure img{
+.footer_img  img{
     width: 150px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px 0px #3f3f3f9c;
 }
 .footer_img button{
     border: none;
@@ -419,7 +572,16 @@ main, header, footer{
     width: 100px;
     height: 40px;
     border-radius: 20px;
-
+    transition: all 0.3s;
+}
+.footer_img button a{
+    text-decoration: none;
+    color: #181818;
+}
+.footer_img button:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+    box-shadow: 0px 0px 10px 0px #3f3f3f9c;
 }
 /*---------------------------------------------------@MEDIA*/
 @media(min-width: 480px){
@@ -437,29 +599,32 @@ main, header, footer{
         position: absolute;
         left: 260px;
     }
+    .contacta{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .conecta_text{
+        
+        width: 400px;
+    }
     .footer_logo p{
         width: 350px;
     }
-    .footer_img figure img{
-        margin: 5px;
-    }
-
 }
 @media(min-width:600px){
-    .sec_consultorio figure img, .certificaciones figure img{
+    .sec_consultorio  img, .certificaciones  img{
         margin: 5px;
     }
     .servicios_contenedor{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: auto auto;
     }
     .servicios{
         width: 250px;
+        justify-self: center;
         height: 450px;
-        margin: 0px 10px 10px 10px;
-        margin-top: 0px;
     }
     .bene_caja_contenedor{
         margin-top: 30px;
@@ -468,16 +633,67 @@ main, header, footer{
         display: flex;
         width: 100%;
     }
+    .bene_caja  img{
+        width: 100px;
+        height: 100px;
+    }
     .bene_caja_text{
         text-align: left;
         margin-left: 25px;
     }
-    .bene_caja figure img{
-        width: 70px;
+    .bene_caja_text p{
+        padding: 0px;
     }
 }
 @media(min-width: 768px){
-	.contenedorF{
+
+	.header_text{
+		display: flex;
+		flex-direction: row;
+        justify-content: center;
+	}
+	.header_text_C1{
+		margin-top: 40px;
+		padding: 25px;
+        width: 550px;
+	}
+	.header_text .img1{
+		width: 400px;
+	}
+    .sobre_mi{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .circulo_fondo_color2{
+       position: absolute;
+       top: 280px;
+       left: 500px;
+    }
+    .sec_sobre_mi_text{
+        padding: 0px 30px 0px 30px;
+    }
+    .bene_caja_contenedor button{
+        width: 150px;
+        height: 50px;
+    }
+    .contacta{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+    .conecta_text{
+        margin-left: 80px;
+    }
+    .conecta_text p{
+        font-size: 22px;
+    }
+	#arriba{
+		margin-left: 7%;
+	}
+}
+@media(min-width: 1024px){
+    .contenedorF{
 		display: none;	
 	}	
 	.header_redes_completo ul{
@@ -485,17 +701,26 @@ main, header, footer{
 		justify-content: center;
 		padding-left: 0px;
 	}
-	.header_redes_completo li {
+	.header_redes_completo ul li {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		list-style: none;
-		margin: 10px 10px 20px 10px;	
+		margin: 10px 25px 20px 10px;	
 	}
 	.header_redes_completo li a{
 		color: #b48fff;
-		font-size: 20px;
+		transition: all 0.3s;
 	}
+    .header_redes_completo li a:hover{
+		transform: translateY(-10px);
+        transition: all 0.3s;
+		
+	}
+    .header_redes_completo li a i{
+		font-size: 40px;
+	}
+
 	.header_redes_completo{
 		display: block;
 		display: flex;
@@ -504,7 +729,7 @@ main, header, footer{
 	}
 	.navGeneral2{
 		display: flex;
-		justify-content: center;	
+		justify-content: space-between;
 	}
 	.navGeneral2_ul{
 		display: flex;
@@ -519,16 +744,16 @@ main, header, footer{
 	.navGeneral2_ul li a{
 		text-decoration: none;
 		color: #3f3f3f;
-		font-family: Arial;
+        font-family: fuente2;
 		transition: 0.3s;
-        font-size: 12px;
 	}
 	.navGeneral2_ul li a:hover{
-			color: #b48fff;
+		color: #b48fff;
 		transition: 0.3s;
-		}
+	}
 	.logo2{
 		display: block;
+        width: 150px;
 	}
 	.logo2 img{
 		display: block;
@@ -536,50 +761,6 @@ main, header, footer{
 	.logo1{
 		display: none;
 	}
-	.header_text{
-		display: flex;
-		flex-direction: row;
-	}
-	.header_text_C1{
-		margin-top: 40px;
-		padding: 25px;
-	}
-	.header_text .img1{
-		width: 400px;
-	}
-    .sobre_mi{
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    .sec_sobre_mi_text{
-        padding: 0px 30px 0px 30px;
-    }
-    .bene_caja_contenedor button{
-        width: 150px;
-        height: 50px;
-    }
-    .contacta{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-around;
-        padding: 30px;
-    }
-    .contacta span{
-        font-size: 20px;
-    }
-	#arriba{
-		margin-left: 50px;
-	}
-}
-@media(min-width: 1024px){
-	.general{
-		display: flex;
-		justify-content: space-around !important;
-	}
-    .header_text{
-         display: flex;
-         justify-content: space-around;
-    }
     .header_text_C1 h1{
         font-size: 45px;
     }
@@ -590,15 +771,13 @@ main, header, footer{
         width: 350px;
     }
     .header_text_C1{
-        width: 400px;
+        width: 700px;
+        margin-right: 200px;
     }
     .header_redes_completo ul li a {
         font-size: 27px;
     }
-	.header_button{
-        width: 150px;
-        height: 50px;
-    }
+
     .sobre_mi{
         display: flex;
         justify-content: center;
@@ -608,14 +787,39 @@ main, header, footer{
         width: 300px;
     }
     .sec_sobre_mi_text{
-        width: 500px;
-    }.bene_caja_contenedor{
+        width: 700px;
+        margin-left: 100px;
+    }
+    .sec_sobre_mi_text p{
+        font-size:20px ;
+    }
+    .circulo_fondo_color2{
+        top: 500px;
+        left: 430px;
+    }
+    .circulo_fondo_color3{
+        position: absolute;
+        top: 150px;
+        right: 50px;
+        z-index: -1;
+        background: rgba(201, 143, 240, 0.4);
+        box-shadow: 0px 0px 100px  rgba(201, 143, 240);
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    .certificaciones .certi1{
+        width: 450px;
+        margin: 0px 10px 30px 10px;
+    }
+    .servicios_contenedor{
+           grid-template-columns: auto auto auto ;
+    }
+    .bene_caja_contenedor{
         margin-top: 0px;
-        padding-right: 15px;
+        margin-right: 25px;
     }
-    .sec_beneficios{
-
-    }
+    
     .beneficios_contenedor{
         display: flex;
         justify-content: center;
@@ -631,31 +835,47 @@ main, header, footer{
     .testi_conteiner{
         display: flex;
         justify-content: center;
-        align-items: center;
         flex-direction: row;
         
     }
     .caja_testimonio{
         margin: 20px;
-        height: 250px;
+        height: 320px;
         width: 300px;
     }
     .caja_testimonio p{
+        height: 240px;
         font-family: fuente6;
+    }
+    .sec_consultorio{
+        padding: 35px;
     }
     .caja_consult{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+        margin-top: 50px;
     }
     .caja_consult_text{
         display: flex;
         flex-direction: column;
-        
+        font-size: 22px;
+    }
+    .caja_consult iframe{
+        width: 600px;
+        height: 400px;
     }
     .conecta_text{
-        width: 60%;
+        width: 500px;
+    }
+    .form input{
+        width: 320px;
+        height: 60px;
+    }
+    .form  textarea{
+        width: 320px;
+        height: 120px;
     }
     .footer{
         display: flex;
@@ -668,11 +888,34 @@ main, header, footer{
     .footer_logo p{
         width: 250px;
     }
-    
+    .caja_footer_img{
+        display: flex;
+        flex-direction: row;
+    }
+    .footer_img button{
+        margin-top: 15px;
+    }
+
 }
 @media(min-width: 1200px){
-
-	#arriba{
-		margin-left: 130px;
+    .logo2{
+        width: 220px;
 	}
+    .navGeneral2_ul li a{
+        font-size: 17px;
+	}
+    .bene_caja_text{
+        width: 600px;
+    }
+    .circulo_fondo_color4{
+        position: absolute;
+        top: 550px;
+        right: 230px;
+        z-index: -1;
+        background: rgba(201, 143, 240, 0.4);
+        box-shadow: 0px 0px 100px  rgba(201, 143, 240);
+        width: 150px;
+        height: 159px;
+        border-radius: 50%;
+    }
 }
