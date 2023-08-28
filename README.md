@@ -1,4 +1,7 @@
-###  :tw-1f31f:  Bienvenida al repositorio de la Dr. Morales  :tw-1f31f: 
+###  Bienvenida al repositorio de la Dr. Morales 
+Hola!
+Soy Micaela Balboa y diseñe la página web de la Dr.Morales con html, css, bootstrap y javascript.
+
 El objetivo principal de la página de la Dra. Morales es proporcionar un espacio en línea donde las personas puedan acceder a recursos y servicios que promuevan su bienestar mental y emocional. A través de una combinación de información, servicios y herramientas, la página busca lograr varios objetivos:
 
 - **Conexión Personal:** La página tiene como objetivo presentar a la Dra. Morales como un profesional con experiencia y empatía, estableciendo una conexión personal con los visitantes que buscan apoyo psicológico.
